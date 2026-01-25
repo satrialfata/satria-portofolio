@@ -464,8 +464,6 @@ h2 {
 }
 
 .certification-card {
-    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150"><rect width="200" height="150" fill="%23f0f0f0"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="16" fill="%23999">Certificate Image</text></svg>') no-repeat center center;
-    background-size: cover;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -474,6 +472,16 @@ h2 {
     height: 250px;
     display: flex;
     align-items: flex-end;
+}
+
+.certification-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .certification-card:hover {
@@ -487,11 +495,13 @@ h2 {
     width: 100%;
     color: white;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .certification-card h3 {
     margin-bottom: 10px;
-    color: #667eea;
+    color: #ffffff;
     font-size: 1.2rem;
 }
 
